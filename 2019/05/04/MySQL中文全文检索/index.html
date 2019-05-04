@@ -5,15 +5,19 @@
   
 
   
-  <title>Hexo</title>
+  <title>MySQL中文全文检索 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://hiyaojie.github.io/hiyaojie-blog/index.html">
+  <meta name="description" content="背景项目需要做一个关键词检索的功能，一开始使用like模糊匹配，存在两个问题：效率低，很难查到想要的结果，所以使用MySQL自带的全文检索功能进行优化。 MySQL中文全文检索在MySQL5.7.6之前，全文索引只支持英文全文索引，不支持中文全文索引，需要利用分词器把中文段落预处理拆分成单词，然后存入数据库。 从MySQL5.7.6开始，MySQL内置了ngram全文解析器，用来支持中文、日文、韩">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL中文全文检索">
+<meta property="og:url" content="https://hiyaojie.github.io/hiyaojie-blog/2019/05/04/MySQL中文全文检索/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="背景项目需要做一个关键词检索的功能，一开始使用like模糊匹配，存在两个问题：效率低，很难查到想要的结果，所以使用MySQL自带的全文检索功能进行优化。 MySQL中文全文检索在MySQL5.7.6之前，全文索引只支持英文全文索引，不支持中文全文索引，需要利用分词器把中文段落预处理拆分成单词，然后存入数据库。 从MySQL5.7.6开始，MySQL内置了ngram全文解析器，用来支持中文、日文、韩">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-04T02:11:52.586Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="MySQL中文全文检索">
+<meta name="twitter:description" content="背景项目需要做一个关键词检索的功能，一开始使用like模糊匹配，存在两个问题：效率低，很难查到想要的结果，所以使用MySQL自带的全文检索功能进行优化。 MySQL中文全文检索在MySQL5.7.6之前，全文索引只支持英文全文索引，不支持中文全文索引，需要利用分词器把中文段落预处理拆分成单词，然后存入数据库。 从MySQL5.7.6开始，MySQL内置了ngram全文解析器，用来支持中文、日文、韩">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,9 +64,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-MySQL中文全文检索" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-MySQL中文全文检索" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/05/04/MySQL中文全文检索/" class="article-date">
   <time datetime="2019-05-04T00:42:05.097Z" itemprop="datePublished">2019-05-04</time>
@@ -75,8 +77,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/04/MySQL中文全文检索/">MySQL中文全文检索</a>
+    <h1 class="article-title" itemprop="name">
+      MySQL中文全文检索
     </h1>
   
 
@@ -139,134 +141,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-i18n前端国际化" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/03/19/i18n前端国际化/" class="article-date">
-  <time datetime="2019-03-19T13:46:17.000Z" itemprop="datePublished">2019-03-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/19/i18n前端国际化/">i18n前端国际化</a>
-    </h1>
+    <a href="/2019/03/19/i18n前端国际化/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">i18n前端国际化</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="jquery-18n-properties框架介绍"><a href="#jquery-18n-properties框架介绍" class="headerlink" title="jquery.18n.properties框架介绍"></a>jquery.18n.properties框架介绍</h3><p>地址：<a href="https://github.com/jquery-i18n-properties/jquery-i18n-properties" target="_blank" rel="noopener">GitHUb地址</a></p>
-<p>lightweight jQuery plugin for providing internationalization to javascript from ‘.properties’ files</p>
-<p>轻量级jquery插件用于提供基于.properties文件的国际化支持    </p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p><a href="https://github.com/hiyaojie/demos/tree/master/i18n" target="_blank" rel="noopener">Demo链接</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hiyaojie.github.io/hiyaojie-blog/2019/03/19/i18n前端国际化/" data-id="cjv8vg93y000134p8rrirsoqz" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-使用hexo在github搭建博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/03/04/使用hexo在github搭建博客/" class="article-date">
-  <time datetime="2019-03-04T09:26:21.000Z" itemprop="datePublished">2019-03-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/04/使用hexo在github搭建博客/">使用hexo在github搭建博客</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hiyaojie.github.io/hiyaojie-blog/2019/03/04/使用hexo在github搭建博客/" data-id="cjv8vg94j000234p88fgwdjkd" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/03/04/hello-world/" class="article-date">
-  <time datetime="2019-03-04T08:14:59.360Z" itemprop="datePublished">2019-03-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/04/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://hiyaojie.github.io/hiyaojie-blog/2019/03/04/hello-world/" data-id="cjv8vg94t000434p80qh9mqxg" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
